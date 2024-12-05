@@ -1,11 +1,7 @@
-version: '3.8'
-
 services:
   analytics:
-    build: ./analytics
+    build: ../analytics
     container_name: analytics_consumer
-    depends_on:
-      - kafka
     environment:
       KAFKA_BROKERS: 192.168.1.15:9092
     volumes:
@@ -14,10 +10,8 @@ services:
       - "3000:3000"
 
   notifications:
-    build: ./notifications
+    build: ../notifications
     container_name: notifications_consumer
-    depends_on:
-      - kafka
     environment:
       KAFKA_BROKERS: 192.168.1.15:9092
     volumes:
