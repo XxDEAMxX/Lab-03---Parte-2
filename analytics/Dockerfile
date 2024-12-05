@@ -1,4 +1,3 @@
-# Dockerfile for Analytics Consumer
 FROM node:18-alpine
 
 WORKDIR /usr/src/app

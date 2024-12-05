@@ -35,3 +35,15 @@ services:
       - ./producer:/app
     ports:
       - "4000:4000"
+
+  notifications:
+    build: ./notifications
+    container_name: notifications_consumer
+    depends_on:
+      - kafka
+    environment:
+      KAFKA_BROKERS: 192.168.1.15:9092
+    volumes:
+      - ./notifications:/app
+    ports:
+      - "5000:5000"   
