@@ -1,6 +1,6 @@
 const express = require('express');
 const { kafka } = require('./kafkaConfig');
-const { setupSockets, updateClients } = require('./sockets');
+const { setupSockets, updateClients } = require('./socket');
 
 const app = express();
 const PORT = 3000;
@@ -10,27 +10,30 @@ const server = app.listen(PORT, () => {
 });
 
 const movieCounts = {};
-const analyticsConsumer = kafka.consumer({ groupId: 'analytics-group' });
+const analyticsConsumer = kafka.consumer({ groupId: 'ka' });
 
 setupSockets(server, movieCounts);
 
 async function startConsumer() {
+  console.log('Starting analytics consumer');
   await analyticsConsumer.connect();
-  await analyticsConsumer.subscribe({ topic: 'movie-events', fromBeginning: true });
+  await analyticsConsumer.subscribe({ topic: 'counter', fromBeginning: true });
 
   await analyticsConsumer.run({
     eachMessage: async ({ message }) => {
-      console.log('Received message:', message.value.toString());
       const event = JSON.parse(message.value.toString());
-      const movieName = event.movieName;
+      console.log('Event received:', event);
 
-      movieCounts[movieName] = (movieCounts[movieName] || 0) + 1;
+      const movieTitle = event.movie.title;
+
+      movieCounts[movieTitle] = (movieCounts[movieTitle] || 0) + 1;
+      console.log('Movie counts:', movieCounts);
+
       updateClients(movieCounts);
     },
   });
 }
 
-startConsumer().catch(console.error);
+startConsumer().catch((err) => console.error('Error in consumer:', err));
 
-// Archivos estáticos
 app.use(express.static('public'));

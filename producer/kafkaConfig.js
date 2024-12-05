@@ -1,8 +1,8 @@
 const { Kafka } = require('kafkajs');
 
 const kafka = new Kafka({
-  clientId: 'movie-app',
-  brokers: ['localhost:9092'],
+  clientId: 'producer',
+  brokers: ['kafka:9092'],
 });
 
 module.exports = { kafka };

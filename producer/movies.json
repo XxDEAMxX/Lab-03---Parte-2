@@ -2,19 +2,19 @@
     {
       "id": 1,
       "title": "Inception",
-      "poster": "https://via.placeholder.com/150",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg",
       "description": "A mind-bending thriller by Christopher Nolan."
     },
     {
       "id": 2,
       "title": "The Matrix",
-      "poster": "https://via.placeholder.com/150",
+      "poster": "https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_.jpg",
       "description": "A groundbreaking sci-fi movie about reality."
     },
     {
       "id": 3,
       "title": "Interstellar",
-      "poster": "https://via.placeholder.com/150",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
       "description": "An epic space adventure by Christopher Nolan."
     }
   ]

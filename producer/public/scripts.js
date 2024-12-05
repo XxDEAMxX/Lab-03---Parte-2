@@ -1,4 +1,3 @@
-// Fetch and display movies
 async function loadMovies() {
     const response = await fetch('/movies');
     const movies = await response.json();
@@ -17,7 +16,6 @@ async function loadMovies() {
     });
   }
   
-  // Handle movie selection
   async function selectMovie(movieId) {
     const userData = {
       name: prompt('Enter your name:'),
@@ -43,6 +41,5 @@ async function loadMovies() {
     }
   }
   
-  // Initialize
   document.addEventListener('DOMContentLoaded', loadMovies);
   
