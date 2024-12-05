@@ -11,9 +11,12 @@ function setupSockets(server, movieCounts) {
   });
 }
 
-function updateClients(movieCounts) {
+function updateClients(movieCounts, lastEvent) {
   if (io) {
-    io.emit('update', getTopMovies(movieCounts));
+    io.emit('update', {
+      topMovies: getTopMovies(movieCounts),
+      lastEvent
+    });
   }
 }
 

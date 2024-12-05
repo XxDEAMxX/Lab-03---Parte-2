@@ -16,6 +16,30 @@
       "title": "Interstellar",
       "poster": "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
       "description": "An epic space adventure by Christopher Nolan."
+    },
+    {
+      "id": 4,
+      "title": "The Dark Knight",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_FMjpg_UX1000_.jpg",
+      "description": "A classic superhero movie by Christopher Nolan."
+    },
+    {
+      "id": 5,
+      "title": "The Avengers",
+      "poster": "https://i.pinimg.com/736x/26/04/7a/26047a439ca5d3d82b2d982f9eb2f124.jpg",
+      "description": "A superhero movie by Marvel Studios."
+    },
+    {
+      "id": 6,
+      "title": "The Shawshank Redemption",
+      "poster": "https://pics.filmaffinity.com/Cadena_perpetua-576140557-large.jpg",
+      "description": "A classic drama movie about redemption."
+    },
+    {
+      "id": 7,
+      "title": "The Godfather",
+      "poster": "https://pics.filmaffinity.com/El_padrino-993414333-large.jpg",
+      "description": "A classic crime movie by Francis Ford Coppola."
     }
   ]
   

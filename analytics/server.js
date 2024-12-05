@@ -29,7 +29,7 @@ async function startConsumer() {
       movieCounts[movieTitle] = (movieCounts[movieTitle] || 0) + 1;
       console.log('Movie counts:', movieCounts);
 
-      updateClients(movieCounts);
+      updateClients(movieCounts, event);
     },
   });
 }

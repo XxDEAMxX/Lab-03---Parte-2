@@ -3,7 +3,7 @@ services:
     build: ../analytics
     container_name: analytics_consumer
     environment:
-      KAFKA_BROKERS: 192.168.1.15:9092
+      KAFKA_BROKERS: kafka:9092
     volumes:
       - ./analytics:/app
     ports:
@@ -13,7 +13,7 @@ services:
     build: ../notifications
     container_name: notifications
     environment:
-      KAFKA_BROKERS: 192.168.1.15:9092
+      KAFKA_BROKERS: kafka:9092
     volumes:
       - ./notifications:/app
     ports:

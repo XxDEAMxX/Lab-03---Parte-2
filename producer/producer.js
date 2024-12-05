@@ -13,7 +13,7 @@ app.use(express.static('public'));
 
 // Kafka Producer Configuration
 const Producer = kafka.Producer;
-const client = new kafka.KafkaClient({ kafkaHost: '192.168.1.15:9092' });
+const client = new kafka.KafkaClient({ kafkaHost: 'kafka:9092' });
 const producer = new Producer(client);
 
 producer.on('ready', () => console.log('Kafka Producer is connected and ready'));
