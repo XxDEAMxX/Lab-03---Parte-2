@@ -16,10 +16,11 @@ setupSockets(server, movieCounts);
 
 async function startConsumer() {
   await analyticsConsumer.connect();
-  await analyticsConsumer.subscribe({ topic: 'show-interactions', fromBeginning: true });
+  await analyticsConsumer.subscribe({ topic: 'movie-events', fromBeginning: true });
 
   await analyticsConsumer.run({
     eachMessage: async ({ message }) => {
+      console.log('Received message:', message.value.toString());
       const event = JSON.parse(message.value.toString());
       const movieName = event.movieName;
 
