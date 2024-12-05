@@ -24,7 +24,7 @@ def start_consumer():
                 continue
 
             if user_data['age'] < 18:
-                print("Enviando correo...")
+                print(f"Enviando correo a {user_data['email']} usuario {user_data['name']} vio la película: '{movie_data['title']}'")
                 try:
                     send_email(
                         to=user_data['email'],
