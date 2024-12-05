@@ -37,7 +37,7 @@ services:
       - "4000:4000"
 
   notifications:
-    build: ./notifications
+    build: ../notifications
     container_name: notifications_consumer
     depends_on:
       - kafka
