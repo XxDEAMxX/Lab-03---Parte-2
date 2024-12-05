@@ -2,7 +2,7 @@ const { Kafka } = require('kafkajs');
 
 const kafka = new Kafka({
   clientId: 'analytics',
-  brokers: ['kafka:9092'],
+  brokers: ['192.168.1.15:9092'],
 });
 
 module.exports = { kafka };
